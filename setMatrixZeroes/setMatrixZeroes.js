@@ -2,7 +2,6 @@ var setZeroes = function(matrix) {
   let zeroed = []
   let zeroedTupple;
   let helper = (y, x) => {
-      // console.log('helping: ' + y + ' ' + x);
       matrix[y][x] = 0;
       zeroed[y][x] = true;
       for (let i = 0; i < matrix[y].length; i++) {
@@ -17,7 +16,6 @@ var setZeroes = function(matrix) {
               zeroed[i][x] = true;
           }
       }
-      // console.log(zeroed[0][zeroed[0].length-1]);
   }
 
   for (let i = 0; i < matrix.length; i++) {
@@ -37,18 +35,4 @@ var setZeroes = function(matrix) {
   }
 
   return matrix;
-  /*
-      Input: Matrix
-      Output: Zeroed Matrix
-      Edge: matrix length is 1
-      constraints: stated
-
-      1. Iterate to the first zero
-      2. Zero everything above it
-      3. Zero everything below it
-  */
 };
-
-let myMatrix = [[0,1,2,0],[3,4,5,2],[1,3,1,5]];
-
-console.log(setZeroes(myMatrix));
