@@ -17,6 +17,7 @@ var setZeroes = function(matrix) {
               zeroed[i][x] = true;
           }
       }
+      console.log(matrix[0][matrix[0].length-1]);
   }
 
   for (let i = 0; i < matrix.length; i++) {
@@ -47,3 +48,7 @@ var setZeroes = function(matrix) {
       3. Zero everything below it
   */
 };
+
+let myMatrix = [[0,1,2,0],[3,4,5,2],[1,3,1,5]];
+
+console.log(setZeroes(myMatrix));
