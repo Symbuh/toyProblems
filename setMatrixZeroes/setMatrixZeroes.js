@@ -2,7 +2,7 @@ var setZeroes = function(matrix) {
   let zeroed = []
   let zeroedTupple;
   let helper = (y, x) => {
-      console.log('helping: ' + y + ' ' + x);
+      // console.log('helping: ' + y + ' ' + x);
       matrix[y][x] = 0;
       zeroed[y][x] = true;
       for (let i = 0; i < matrix[y].length; i++) {
@@ -17,7 +17,7 @@ var setZeroes = function(matrix) {
               zeroed[i][x] = true;
           }
       }
-      console.log(matrix[0][matrix[0].length-1]);
+      // console.log(zeroed[0][zeroed[0].length-1]);
   }
 
   for (let i = 0; i < matrix.length; i++) {
@@ -29,7 +29,7 @@ var setZeroes = function(matrix) {
   }
 
   for (let i = 0; i < matrix.length; i++) {
-      for (let j = 0; j < matrix.length; j++) {
+      for (let j = 0; j < matrix[i].length; j++) {
           if (matrix[i][j] === 0 && zeroed[i][j] === false) {
               helper(i, j);
           }
